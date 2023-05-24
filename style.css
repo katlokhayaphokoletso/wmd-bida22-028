@@ -1,0 +1,770 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    background:#fff;
+    overflow-x: hidden;
+}
+
+/***Navigation bar***/
+
+
+nav {
+  width: 100%;
+  height: 10vh;
+  background: #111313;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-transform: uppercase;
+  position: fixed;
+}
+
+nav .logo h2{
+    color: #fff;
+    font-size: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.logo h2 span{
+    color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+nav input, nav label {
+    display: none;
+}
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin: 0 5px;
+}
+
+nav ul li a {
+    color:whitesmoke;
+    text-decoration: none;
+    padding: 5px 15px;
+    border-radius: 35px;
+    transition: .5s;
+    background: black;
+    display: block;
+}
+
+nav ul li a:hover, nav ul li a.active {
+    background: gray;
+    color: red;
+}
+
+@media (max-width: 940px) {
+    nav label {
+        display: block;
+        font-size: 25px;
+        color: white;
+        cursor: pointer;
+    }
+    nav #check:checked ~ ul {
+        left: 0;
+    }
+    nav #check:checked ~ label i::before {
+        content: "\f00d";
+    }
+    nav ul {
+        display: block;
+        width: 100%;
+        height: 100vh;
+        position: fixed;
+        background: #830707;
+        left: -100%;
+        top: 80px;
+        text-align: center;
+        transition: .5s ease;
+    }
+    nav ul li {
+        margin: 20px 0;
+    }
+    nav ul li a {
+        display: block;
+    }
+    nav ul li a:hover, nav ul li a.active {
+        background: none;
+        color: rgb(225, 150, 65);
+    }
+}
+
+
+
+
+
+/***Banner***/
+.banner{
+  width: 100%;
+  min-height: 85vh;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: animate 16s ease-in-out infinite;
+
+  }
+  @keyframes animate{
+    0%,100%{
+      background-image: url(images/warner\ bros\ cover.jpeg);
+    }
+    25%{
+      background-image: url(images/Warner\ Bros\ 2.png);
+    }
+    50%{
+      background-image: url(images/Warner\ Bros\ 3.jpeg);
+    }
+    75%{
+      background-image: url(images/Warner\ Bros\ 4.jpeg);
+    }
+  }
+  
+  .banner h1{
+  color: #fff;
+  font-size: 90px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  line-height: 80px;
+  font-family: Arial, Helvetica, sans-serif;
+  }
+ .banner p{
+  position:absolute;
+  color: #fff;
+  font-size: 40px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  line-height: 80px;
+  padding-top: 200px;
+  font-family: 'Merienda', cursive;
+  }
+
+
+@media (max-width: 940px){
+   .banner h1{
+    font-size: 60px;
+   } 
+}
+
+@media (max-width: 680px){
+   .banner h1{
+    font-size: 40px;
+   }
+   .banner p{
+    font-size: 25px;
+    text-align: center;
+   } 
+}
+
+.intro{
+  min-height: 10vh;
+  background: #31b49e;
+  padding: 20px 40px; 
+  color: white;
+}
+.intro h2{
+    font-size: 40px;
+    text-align: center;
+    padding-bottom: 20px;
+}
+.hero-btn{
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    border: 1px solid #fff;
+    padding: 12px 34px;
+    font-size: 13px;
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+
+}
+.hero-btn:hover{
+    border: 1px solid #f44336;
+    background: #f44336;
+    transition: 1s;
+}
+
+
+
+
+
+
+/***games and apps***/
+.about{
+    padding: 100px 40px;
+    color: white;
+}
+.title h2{
+    text-align: center;
+    font-size: 40px;
+    padding-bottom: 20px;
+    color: black;
+     font-family: Arial, Helvetica, sans-serif;
+}
+.about h3{
+    font-size: 30px;
+}
+
+section{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: 90vh;
+    width: 85vw;
+    margin: 0 auto;
+    padding-bottom: 40px;
+}
+#game1 .image{
+    background: url("images/lego.jpeg") center/cover no-repeat;
+}
+#game2 .image{
+    background: url("images/batmanarkharm.jpeg") center/cover no-repeat;
+}
+#game3 .image{
+    background: url("images/mortal.jpeg") center/cover no-repeat;
+}
+#app1 .image{
+  background: url("images/ADULTSWIM.jpeg") center/cover no-repeat;
+}
+#app2 .image{
+  background: url("images/DC\ Universe.jpeg") center/cover no-repeat;
+}
+#app3 .image{
+  background: url("images/TMZ.png") center/cover no-repeat;
+}
+#collection1 .image{
+  background: url("images/actionadve.jpeg") center/cover no-repeat;
+}
+#collection2 .image{
+  background: url("images/holidaymov.png") center/cover no-repeat;
+}
+#collection3 .image{
+  background: url("images/thrills\ and\ chills.jpeg") center/cover no-repeat;
+}
+.content{
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.content h2{
+    text-transform: uppercase;
+    font-size: 36px;
+    letter-spacing: 6px;
+    opacity: 0.9;
+}
+.content span{
+    height: 0.5px;
+    width: 80px;
+    background: #777;
+    margin: 30px 0;
+}
+.content p{
+    padding-bottom: 15px;
+    font-weight: 300;
+    opacity: 0.7;
+    width: 60%;
+    text-align: center;
+    margin: 0 auto;
+    line-height: 1.7;
+}
+.vertical-line{
+    height: 30px;
+    width: 0.5px;
+    background: #777;
+    margin: 0 auto;
+}
+
+
+@media(max-width: 992px){
+    section{
+        grid-template-columns: 1fr;
+        width: 100%;
+    }
+    .image{
+        height: 100vh;
+    }
+    .content{
+        height: 100vh;
+    }
+    .content h2{
+        font-size: 20px;
+        margin-top: 50px;
+    }
+    .content span{
+        margin: 20px 0;
+    }
+    .content p{
+        font-size: 14px;
+    }
+}
+
+
+
+/**movies**/
+.lifestyle{
+    padding: 100px 40px;
+    color: white;
+}
+
+.attractions{
+  font-family: "Poppins";
+  display: flex;
+  overflow-x: hidden;
+}
+.attractions .container{
+  width: 100%;
+  margin: 40px;
+  border-radius: 4px;
+  background: white;
+}
+.img-container img{
+  width: 100%;
+  height: 100%;
+  border-radius: 4px 4px 0px 0px;
+}
+.img-container:hover{
+  transform: scale(1.3);
+  z-index: 1;
+}
+.content-container{
+  padding: 10px 20px;
+}
+.content-container h1{
+  font-size: 24px;
+  color: black;
+}
+.content-container h2{
+  background: #39A9DB;
+  width: 80px;
+  font-size: 8px;
+  padding: 5px;
+  color: white;
+  text-align: center;
+  letter-spacing: 0.08rem;
+  font-weight: 700;
+}
+.content-container p{
+  color: grey;
+  font-weight: 700;
+  font-size: 12px;
+  letter-spacing: 0.02rem;
+  line-height: 1.3rem;
+  margin-bottom: 30px;
+}
+
+@media (max-width: 1040px) {
+  .attractions {
+    flex-direction: column-reverse;
+  }
+.attractions .container {
+    width: 800px;
+  }
+}
+
+@media (max-width: 900px) {
+  .attractions {
+    flex-direction: column-reverse;
+  }
+ .attractions .container {
+    width:600px ;
+    margin-right: 80px;
+  }
+}
+
+@media (max-width: 600px) {
+  .attractions {
+    flex-direction: column-reverse;
+  }
+  .attractions .container {
+    width:400px ;
+  }
+  .content-container p{
+    padding-right: 20px;
+  }
+}
+
+
+
+
+/***movies***/
+.lifestyle{
+  padding: 100px 40px;
+  color: white;
+}
+
+.attractions{
+font-family: "Poppins";
+display: flex;
+overflow-x: hidden;
+}
+.attractions .container{
+width: 100%;
+margin: 40px;
+border-radius: 4px;
+background: white;
+}
+.img-container img{
+width: 100%;
+height: 100%;
+border-radius: 4px 4px 0px 0px;
+}
+.content-container{
+padding: 10px 20px;
+}
+.content-container h1{
+font-size: 24px;
+color: black;
+}
+.content-container h2{
+background: #39A9DB;
+width: 80px;
+font-size: 8px;
+padding: 5px;
+color: white;
+text-align: center;
+letter-spacing: 0.08rem;
+font-weight: 700;
+}
+.content-container p{
+color: grey;
+font-weight: 700;
+font-size: 12px;
+letter-spacing: 0.02rem;
+line-height: 1.3rem;
+margin-bottom: 30px;
+}
+
+@media (max-width: 1040px) {
+.attractions {
+  flex-direction: column-reverse;
+}
+.attractions .container {
+  width: 800px;
+}
+}
+
+@media (max-width: 900px) {
+.attractions {
+  flex-direction: column-reverse;
+}
+.attractions .container {
+  width:600px ;
+  margin-right: 80px;
+}
+}
+
+@media (max-width: 600px) {
+.attractions {
+  flex-direction: column-reverse;
+}
+.attractions .container {
+  width:400px ;
+}
+.content-container p{
+  padding-right: 20px;
+}
+}
+
+
+
+/***feedback***/
+.feedback{
+    padding-top: 100px;
+}
+
+
+.feedback .wrapper{
+  max-width: 500px;
+  width: 100%;
+  background: #31b49e;
+  margin: 20px auto;
+  padding: 30px;
+}
+
+.feedback .wrapper .title{
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 25px;
+  color: rgb(225, 145, 65);
+  text-transform: uppercase;
+  text-align: center;
+}
+.feedback .wrapper .title p{
+    font-size: 15px;
+    font-weight: normal;
+    color: rgb(226, 33, 33);
+    text-transform: lowercase;
+    padding-top: 20px;
+}
+
+.feedback .wrapper .form{
+  width: 100%;
+}
+
+.feedback .wrapper .form .inputfield{
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  display: block;
+}
+
+.feedback .wrapper .form .inputfield label{
+   width: 200px;
+   color: #830707;
+   margin-right: 10px;
+  font-size: 14px;
+}
+
+.feedback .wrapper .form .inputfield .input{
+  width: 100%;
+  outline: none;
+  border: 1px solid royalblue;
+  font-size: 15px;
+  padding: 8px 10px;
+  border-radius: 3px;
+}
+
+.feedback .wrapper .form .inputfield .custom_select select{
+  outline: none;
+  width: 100%;
+  height: 100%;
+  border: 0px;
+  padding: 8px 10px;
+  font-size: 15px;
+  border: 1px solid royalblue;
+  border-radius: 3px;
+}
+.feedback .wrapper .form .inputfield .btn{
+  width: 100%;
+   padding: 8px 10px;
+  font-size: 15px; 
+  border: 0px;
+  background:  royalblue;
+  color: rgb(232, 43, 49);
+  cursor: pointer;
+  border-radius: 3px;
+  outline: none;
+}
+
+.feedback .wrapper .form .inputfield .btn:hover{
+  background: blue;
+}
+
+@media (max-width:420px) {
+  .feedback .wrapper .form .inputfield label{
+    margin-bottom: 5px;
+  }
+} 
+
+/***thank you page***/
+.background{
+  width: 100%;
+  min-height: 100vh;
+  background: url(images/2012.png) no-repeat;
+  background-size: cover;
+  background-position: top;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  }
+  .background h1{
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 50px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  line-height: 80px;
+  text-align: center;
+  padding-bottom: 40px;
+  }
+ .background p{
+  position:absolute;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 30px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  line-height: 80px;
+  padding-top: 200px;
+  text-align: center;
+  }
+
+
+@media (max-width: 940px){
+   .background h1{
+    font-size: 40px;
+   } 
+}
+
+@media (max-width: 680px){
+   .background h1{
+    font-size: 40px;
+   }
+   .background p{
+    font-size: 25px;
+    text-align: center;
+    padding-top: 400px;
+   } 
+}
+
+
+.scroll-btn {
+    font-size: 3rem;
+    cursor: pointer;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: none;
+    color: orange;
+}
+.scroll-btn:hover {
+    color: gray;
+}
+
+
+
+footer {
+    position: fixed;
+    bottom: 0;
+}
+
+@media (max-height:1200px) {
+    footer {
+        position: static;
+    }
+}
+
+.footer-general {
+    background-color: #111313;
+    box-sizing: border-box;
+    width: 100%;
+    text-align: left;
+    font: bold 16px;
+    padding: 50px 50px 60px 50px;
+    margin-top: 80px;
+}
+
+.footer-general .footer-left, .footer-general .footer-center, .footer-general .footer-right {
+    display:inline-block; 
+    vertical-align:top ;
+}
+
+/* Footer left */
+
+.footer-general .footer-left {
+    width: 30%;
+}
+
+.footer-general h3 {
+    color: #fff;
+    font-size: 45px;
+    margin: 0;
+}
+
+/* Footer links */
+
+.footer-general .footer-links {
+    color:#fff;
+    margin: 20px 0 12px;
+}
+
+.footer-general .footer-links a {
+    display: inline-block;
+    line-height: 1.8;
+    text-decoration: none;
+    color: inherit;
+}
+
+.footer-general {
+    color: #8f9296;
+    font-size: 14px;
+    font-weight: normal;
+    margin: 0;
+}
+
+/* Footer Center */
+
+.footer-general .footer-center {
+    width: 35%;
+}
+
+.footer-general .footer-center i {
+    background-color: #fff;
+    color: blue;
+    font-size: 25px;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 42px;
+    margin: 10px 15px;
+    vertical-align: middle;
+}
+
+.footer-general .footer-center i.fa-envelope {
+    font-size: 17px;
+    line-height: 38px;
+}
+.footer-general .footer-center p {
+    display: inline-block;
+    color: #fff;
+    margin: 0;
+}
+.footer-general .footer-center p span {
+    display: block;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 2;
+}
+
+.footer-general .footer-center p a {
+    color: #fff ;
+    text-decoration: none;
+}
+
+/* Footer Right */
+
+.footer-general .footer-right {
+    width: 30%;
+}
+.footer-general .brief-about {
+    line-height: 20px;
+    color: #fff;
+    font-size: 13px;
+   
+}
+
+.footer-general .brief-about span {
+    display: block;
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+.footer-links a:hover {
+    color: rgb(255, 111, 0);
+}
+
+@media (max-width: 880px) {
+    .footer-general .footer-left, .footer-general .footer-center, .footer-general .footer-right {
+        display: block;
+        width: 100%;
+        margin-bottom: 40px;
+        text-align: center;
+    }
+} 
+
+/*horror*/
